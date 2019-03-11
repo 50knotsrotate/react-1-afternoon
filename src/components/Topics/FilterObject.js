@@ -22,28 +22,28 @@ class FilterObject extends Component {
             ],
         updatedObject: undefined
     }
-    updateKeyword = (e) => { 
+    updateKeyword = (e) => {
         this.setState({
             keyWord: e.target.value
         })
 
     }
     
-    getObjects = () => { 
+    getObjects = () => {
         let filteredObjects = [...this.state.originalObject]
-        filteredObjects =  filteredObjects.filter(dog => dog[this.state.keyWord]) 
-console.log(filteredObjects)
+        filteredObjects = filteredObjects.filter(dog => dog[this.state.keyWord])
+        console.log(filteredObjects)
         this.setState({
             updatedObject: filteredObjects
         })
     }
 
-    render() { 
+    render() {
         return (
             <div className='puzzleBox filterObjectPB'>
                 <span className='puzzleText'> {JSON.stringify(this.state.originalObject)}</span>
                 <input className='inputLine' onChange={this.updateKeyword}></input>
-                <button className='confirmationButton' onClick={this.getObjects}>I'll filter your object ;)</button>
+                <button className='confirmationButton' onClick={this.getObjects}>Filter</button>
                 <span className='resultsBox filterObjectRB'>{JSON.stringify(this.state.updatedObject)}</span>
             
             </div>
