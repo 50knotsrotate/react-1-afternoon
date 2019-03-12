@@ -41,11 +41,11 @@ class FilterObject extends Component {
     render() {
         return (
             <div className='puzzleBox filterObjectPB'>
+                <h4>Filter Object</h4>
                 <span className='puzzleText'> {JSON.stringify(this.state.originalObject)}</span>
                 <input className='inputLine' onChange={this.updateKeyword}></input>
                 <button className='confirmationButton' onClick={this.getObjects}>Filter</button>
-                <span className='resultsBox filterObjectRB'>{JSON.stringify(this.state.updatedObject)}</span>
-            
+                <span className='resultsBox filterObjectRB'>{JSON.stringify(this.state.updatedObject)}</span> 
             </div>
             
         )
