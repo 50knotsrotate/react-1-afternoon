@@ -26,7 +26,6 @@ class Sum extends Component {
             number1: '',
             number2: ''
         })
-        console.log(this.state.num)
     }
 
   
